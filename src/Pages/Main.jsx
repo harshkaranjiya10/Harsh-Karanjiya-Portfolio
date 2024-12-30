@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { DATA } from "../Data/Resume";
 import ReactMarkdown from "react-markdown";
-import { motion } from "motion/react";
 export default function Main() {
   return (
     <div className="">
@@ -79,17 +78,6 @@ export default function Main() {
                       )}
                     </div>
                   </div>
-                  <motion.div
-                    className="box"
-                    // Animate when this value changes:
-                    animate={{ scale: 2 }}
-                    // Fade in when the element enters the viewport:
-                    whileInView={{ opacity: 1 }}
-                    // Animate the component when its layout changes:
-                    layout
-                    // Style now supports indepedent transforms:
-                    style={{ x: 100 }}
-                  />
                 </div>
               );
             })}

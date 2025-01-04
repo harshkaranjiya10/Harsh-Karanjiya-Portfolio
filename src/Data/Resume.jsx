@@ -109,4 +109,26 @@ export const DATA = {
       },
     },
   ],
+  contact: [
+    {
+      name: "Github",
+      href: "https://github.com/harshkaranjiya10",
+    },
+    {
+      name: "Linkedin",
+      href: "https://www.linkedin.com/in/harsh-karanjiya-b30420229/",
+    },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/harshkaranjiya/",
+    },
+    {
+      name: "Email",
+      href: "mailto:harshkaranjiya10@gmail.com",
+    },
+    {
+      name: "Pintrest",
+      href: "https://www.pinterest.com/harshkaranjiya/",
+    },
+  ]
 };

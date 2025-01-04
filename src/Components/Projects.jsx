@@ -26,6 +26,7 @@ export default function Projects() {
           {DATA.projects.map((project) => {
             return (
               <div
+                key={project.title}
                 className="flex flex-col justify-between cursor-pointer h-auto w-auto bg-black border border-gray-700 rounded-2xl text-sm"
                 onClick={() => {
                   window.open(
@@ -48,7 +49,7 @@ export default function Projects() {
                   <div className="py-4 flex">
                     {project.tech.map((technology) => {
                       return (
-                        <div className="mx-1 flex px-[4px] font-sans text-white bg-gray-900 border-solid rounded-md hover:opacity-90 hover:bg-gray-950 text-sm">
+                        <div key={technology} className="mx-1 flex px-[4px] font-sans text-white bg-gray-900 border-solid rounded-md hover:opacity-90 hover:bg-gray-950 text-sm">
                           {technology}
                         </div>
                       );

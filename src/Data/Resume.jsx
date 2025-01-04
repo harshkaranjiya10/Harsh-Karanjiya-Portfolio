@@ -104,7 +104,7 @@ export const DATA = {
       url: {
         github: "https://github.com/harshkaranjiya10/Harsh-Karanjiya-Portfolio",
         githubDisplay: true,  
-        vercel: "",
+        vercel: "https://harsh-karanjiya-portfolio.vercel.app/",
         vercelDisplay: false,
       },
     },

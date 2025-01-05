@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <div
-        className="h-full"
+        className="h-full w-max lg:w-full md:w-full sm:w-full"
         style={{
           "--dot-bg": "#0a0a0a",
           "--dot-color": "#848282",

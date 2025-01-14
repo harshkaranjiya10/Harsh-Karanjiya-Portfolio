@@ -1,47 +1,49 @@
 import { DATA } from "../Data/Resume";
-import ReactMarkdown from "react-markdown";
-import { useState } from "react";
-import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
+
 export default function Education() {
   return (
-    <section id="Education">
-      <div className="mx-auto max-w-screen-lg pt-10 flex flex-col justify-center font-mono text-white">
-        <div className="text-2xl font-extrabold">Education</div>
-        <div className="text-lg py-2 ">
-          {DATA.education.map((education) => {
-            const [viewDesc, setViewDesc] = useState(false);
-            return (
-              <div
-                key={education}
-                className="group p-5 font-sans bg-gray-950 text-white border-solid border-[1px] border-gray-800 rounded-md hover:opacity-90 hover:bg-black-200"
-                onClick={() => { window.open("https://www.daiict.ac.in/", "_blank", "noopener,noreferrer");}}
-              >
-                <div className="flex justify-between">
-                  <div className="flex items-center px-2">
-                    <img
-                      src="DaiictLogo.png"
-                      width={"50px"}
-                      height={"20px"}
-                      className="border-2 rounded-full"
-                    />
-                    <div className="px-4">
-                      {education.Institue}
-                      <div className="font-semibold text-[16px]">
-                        {education.title}
-                      </div>
+    <section id="Education" className="py-10">
+      <div className="mx-auto max-w-screen-lg px-4 sm:px-6 lg:px-8 flex flex-col justify-center font-mono text-white">
+        <div className="text-2xl sm:text-3xl font-extrabold mb-6">Education</div>
+        <div className="space-y-4">
+          {DATA.education.map((education, index) => (
+            <div
+              key={index}
+              className="group p-5 bg-gray-950 text-white border border-gray-700 rounded-lg hover:opacity-90 hover:bg-gray-900 cursor-pointer transition duration-200"
+              onClick={() =>
+                window.open(
+                  "https://www.daiict.ac.in/",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+            >
+              <div className="flex flex-col sm:flex-row sm:justify-between items-center">
+                <div className="flex items-center space-x-4">
+                  <img
+                    src="DaiictLogo.png"
+                    alt="Institute Logo"
+                    width="50"
+                    height="50"
+                    className="border-2 border-gray-600 rounded-full"
+                  />
+                  <div>
+                    <div className="text-lg font-bold">{education.Institue}</div>
+                    <div className="text-sm font-semibold text-gray-300">
+                      {education.title}
                     </div>
-                    <div className="h-auto px-2 opacity-0 group-hover:opacity-100">
-                      <ChevronRight />
-                    </div>
-                  </div>
-                  <div className="flex justify-center items-center pr-8">
-                    {education.start} - {education.end}
                   </div>
                 </div>
+                <div className="flex items-center space-x-2 mt-4 sm:mt-0">
+                  <div className="text-sm sm:text-base font-medium">
+                    {education.start} - {education.end}
+                  </div>
+                  <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-gray-200" />
+                </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>

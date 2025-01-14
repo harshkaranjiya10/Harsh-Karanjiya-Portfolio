@@ -6,9 +6,9 @@ import Main from "./Pages/Main";
 import Footer from "./Components/Footer";
 function App() {
   return (
-    <div>
+    <div className="">
       <div
-        className="h-full w-max lg:w-full md:w-full sm:w-full"
+        className="h-full w-full"
         style={{
           "--dot-bg": "#0a0a0a",
           "--dot-color": "#848282",

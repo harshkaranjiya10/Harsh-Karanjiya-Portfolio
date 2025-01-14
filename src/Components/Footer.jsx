@@ -6,9 +6,18 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import GitHubIcon from "@mui/icons-material/GitHub";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import {DATA} from "../Data/Resume"
+import { DATA } from "../Data/Resume";
+import { useState } from "react";
 
 function Footer() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleMode = () => {
+    setDarkMode(!darkMode);
+    // Logic to toggle dark/light mode (you could toggle classes or use context here)
+    document.body.classList.toggle('dark', !darkMode);
+  };
+
   return (
     <div className="fixed bottom-0 w-full py-4 flex justify-center z-10">
       <motion.div
@@ -21,54 +30,54 @@ function Footer() {
         <div className="flex items-center space-x-3">
           <a
             href={DATA.contact[3].href}
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-transparent hover:bg-gray-800"
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-transparent hover:bg-gray-800 transition duration-300"
             aria-label="Mail"
-            >
+          >
             <MailOutlineIcon style={{ color: "white" }} />
           </a>
           <a
-              href={DATA.contact[0].href}
-              className="w-12 h-12 flex items-center justify-center rounded-full bg-transparent hover:bg-gray-800"
-              aria-label="GitHub"
-              >
+            href={DATA.contact[0].href}
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-transparent hover:bg-gray-800 transition duration-300"
+            aria-label="GitHub"
+          >
             <GitHubIcon style={{ color: "white" }} />
           </a>
           <a
-              href={DATA.contact[1].href}
-              className="w-12 h-12 flex items-center justify-center rounded-full bg-transparent hover:bg-gray-800"
-              aria-label="LinkedIn"
-              >
+            href={DATA.contact[1].href}
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-transparent hover:bg-gray-800 transition duration-300"
+            aria-label="LinkedIn"
+          >
             <LinkedInIcon style={{ color: "white" }} />
           </a>
           <a
-              href={DATA.contact[2].href}
-              className="w-12 h-12 flex items-center justify-center rounded-full bg-transparent hover:bg-gray-800"
-              aria-label="Instagram"
-              >
+            href={DATA.contact[2].href}
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-transparent hover:bg-gray-800 transition duration-300"
+            aria-label="Instagram"
+          >
             <InstagramIcon style={{ color: "white" }} />
           </a>
           <a
-              href={DATA.contact[4].href}
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-transparent hover:bg-gray-800"
+            href={DATA.contact[4].href}
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-transparent hover:bg-gray-800 transition duration-300"
             aria-label="Pinterest"
           >
             <PinterestIcon style={{ color: "white" }} />
           </a>
         </div>
 
+        {/* Right Section: Dark/Light Mode */}
         <div className="flex items-center space-x-3 border-l-2 pl-2">
           <div
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-transparent hover:bg-gray-800"
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-transparent hover:bg-gray-800 transition duration-300 cursor-pointer"
             aria-label="Dark Mode"
+            onClick={toggleMode}
           >
-            <DarkModeIcon style={{ color: "white" }} />
+            {darkMode ? (
+              <LightModeIcon style={{ color: "white" }} />
+            ) : (
+              <DarkModeIcon style={{ color: "white" }} />
+            )}
           </div>
-          {/* <div
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-transparent hover:bg-gray-800"
-            aria-label="Light Mode"
-          >
-            <LightModeIcon style={{ color: "white" }} />
-          </div> */}
         </div>
       </motion.div>
     </div>

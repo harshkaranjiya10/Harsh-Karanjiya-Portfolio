@@ -2,67 +2,60 @@ import { DATA } from "../Data/Resume";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
+
 export default function WorkExperience() {
   return (
-    <section id="Work-Experience">
-      <div className="mx-auto max-w-screen-lg pt-10 flex flex-col justify-center font-mono text-white">
-        <div className="text-2xl font-extrabold">Work Experience</div>
-        <div className="text-lg py-2 ">
-          {DATA.experience.map((experience) => {
+    <section id="Work-Experience" className="py-10">
+      <div className="mx-auto max-w-screen-lg px-4 sm:px-6 lg:px-8 flex flex-col justify-center font-mono text-white">
+        <div className="text-2xl sm:text-3xl font-extrabold mb-6">Work Experience</div>
+        <div className="space-y-6">
+          {DATA.experience.map((experience, index) => {
             const [viewDesc, setViewDesc] = useState(false);
+
             return (
               <div
-                key={experience}
-                className="group p-5 font-sans bg-gray-950 border-[1px] text-white border-solid  border-gray-800 rounded-md hover:opacity-90 hover:bg-black-200"
+                key={index}
+                className="group p-5 bg-gray-950 text-white border border-gray-700 rounded-md hover:opacity-90 hover:bg-gray-900 transition duration-200"
               >
-                <div className="flex justify-between">
-                  <div className="flex items-center px-2">
+                <div className="flex flex-col sm:flex-row sm:justify-between items-center sm:items-start">
+                  <div className="flex items-center space-x-4">
                     <img
                       src="csfi.png"
-                      width={"50px"}
-                      height={"20px"}
+                      alt={experience.company}
+                      width="50"
+                      height="20"
                       className="border-2 rounded-full"
                     />
-                    <div className="px-4">
-                      {experience.company}
-                      <div>{experience.title}</div>
-                    </div>
-                    <div
-                      className="h-auto px-2 opacity-0 group-hover:opacity-100"
-                      onClick={() => {
-                        setViewDesc((prev) => {
-                          return !prev;
-                        });
-                      }}
-                    >
-                      <ChevronRight
-                        className={`transition-transform duration-300 ${
-                          viewDesc ? "rotate-90" : ""
-                        }`}
-                      />
+                    <div>
+                      <div className="text-lg font-semibold">{experience.company}</div>
+                      <div className="text-sm">{experience.title}</div>
                     </div>
                   </div>
-                  <div className="flex justify-center items-center pr-8">
-                    {experience.start} {" "} - {" "} {experience.end}
+
+                  <div className="text-sm sm:text-base text-center sm:text-right pt-2 sm:pt-0">
+                    {experience.start} - {experience.end}
+                  </div>
+                  <div
+                    className="h-auto opacity-0 group-hover:opacity-100 cursor-pointer mt-2 sm:mt-0"
+                    onClick={() => setViewDesc((prev) => !prev)}
+                  >
+                    <ChevronRight
+                      className={`transition-transform duration-300 ${viewDesc ? "rotate-90" : ""}`}
+                    />
                   </div>
                 </div>
 
-                <div className="pt-2 text-[14px]">
-                  <div>
-                    {viewDesc ? (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                      >
-                        {experience.description} {experience.title}
-                      </motion.div>
-                    ) : (
-                      <div></div>
-                    )}
-                  </div>
-                </div>
+                {viewDesc && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="pt-2 text-sm text-gray-300"
+                  >
+                    {experience.description}
+                  </motion.div>
+                )}
               </div>
             );
           })}

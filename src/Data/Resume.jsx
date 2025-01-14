@@ -28,7 +28,7 @@ export const DATA = {
   ],
   experience: [
     {
-      company: "Craft Silion Foundation India (CSFI)",
+      company: "Craft Silicon Foundation (CSF)",
       href: "",
       badges: [],
       location: "Arvali",

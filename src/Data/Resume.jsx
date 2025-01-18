@@ -7,7 +7,7 @@ export const DATA = {
   description:
     "Tech Enthusiast turned into Software Engineer. I love building things and helping people.",
   summary:
-    "I'm Passionate [Final year undergrad](#education) with a deep love for coding and technology. My journey led me to develop strong foundation in [Web Development](#education) I thrive on building innovative products and sharing my insights through blogging. Always eager to expand my skills and tackle new challenges, I’m actively seeking lucrative opportunities to leverage my tech expertise and drive impactful projects. Whether it’s through creating seamless web experiences, I’m excited to contribute to the tech landscape and grow alongside it.",
+    "I'm Passionate [Final year undergrad](#education) with a deep love for coding and technology. My journey led me to develop strong foundation in [Web Development](#education) I thrive on building innovative projects. Always eager to expand my skills and tackle new challenges, I’m actively seeking lucrative opportunities to leverage my tech expertise and drive impactful projects. Whether it’s through creating seamless web experiences, I’m excited to contribute to the tech landscape and grow alongside it.",
   skills: [
     "HTML",
     "CSS",

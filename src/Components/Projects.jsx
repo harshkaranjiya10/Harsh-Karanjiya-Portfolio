@@ -44,10 +44,10 @@ export default function Projects() {
                   <div className="pt-2 flex">
                     {project.url.githubDisplay && (
                       <div className="m-1 flex p-1 font-sans text-black bg-white border-solid rounded-md hover:opacity-90 hover:bg-slate-200 text-xs">
-                        <a href={project.url.github} className="flex items-center mx-1" target="_blank" rel="noopener noreferrer">
+                        <div onClick={() => window.open(project.url.github, "_blank", "noopener,noreferrer")} className="flex items-center mx-1" target="_blank" rel="noopener noreferrer">
                           <GitHubIcon className="text-gray-800" />
-                          <div className="px-1">Source</div>
-                        </a>
+                          <div className="px-1" >Source</div>
+                        </div>
                       </div>
                     )}
                     {project.url.vercelDisplay && (

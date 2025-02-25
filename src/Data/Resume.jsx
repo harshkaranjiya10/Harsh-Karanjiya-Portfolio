@@ -13,6 +13,7 @@ export const DATA = {
     "CSS",
     "Javascript",
     "React",
+    "Angular",
     "Tailwind",
     "Node.js",
     "MongoDB",

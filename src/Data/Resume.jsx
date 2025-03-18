@@ -73,7 +73,8 @@ export const DATA = {
       title: "VideoSDK",
       time: "December 2024",
       image: "VideoSDK.png",
-      description: "Developed a visually appealing user interface by transforming Figma designs into a functional layout using ReactJS and Tailwind CSS. Optimized the development workflow with Vite, enabling faster builds. Incorporated modern gradient styles to enhance the application's visual appeal and user experience.",
+      description:
+        "Developed a visually appealing user interface by transforming Figma designs into a functional layout using ReactJS and Tailwind CSS. Optimized the development workflow with Vite, enabling faster builds. Incorporated modern gradient styles to enhance the application's visual appeal and user experience.",
       tech: ["ReactJS", "Tailwind CSS"],
       url: {
         github: "https://github.com/harshkaranjiya10/VideoSDK",
@@ -87,7 +88,8 @@ export const DATA = {
       title: "Dice Game",
       time: "September 2023",
       image: "Dice.png",
-      description: "Developed a dice game with React, using useState and useEffect for game logic and state management. Implemented dice freezing and win detection with a responsive UI.",
+      description:
+        "Developed a dice game with React, using useState and useEffect for game logic and state management. Implemented dice freezing and win detection with a responsive UI.",
       tech: ["ReactJS", "CSS"],
       url: {
         github: "https://github.com/harshkaranjiya10/Dice-Game",
@@ -100,12 +102,27 @@ export const DATA = {
       title: "Portfolio",
       time: "December 2024",
       image: "Portfolio.png",
-      description: "Developed an amazing Portfolio to showase my work to potentiol recruiters. I used latest web desiging techniques like TailwindCSS to make it look good and React.js to make it fast.",
+      description:
+        "Developed an amazing Portfolio to showase my work to potentiol recruiters. I used latest web desiging techniques like TailwindCSS to make it look good and React.js to make it fast.",
       tech: ["ReactJS", "Tailwind CSS"],
       url: {
         github: "https://github.com/harshkaranjiya10/Harsh-Karanjiya-Portfolio",
-        githubDisplay: true,  
+        githubDisplay: true,
         vercel: "https://harsh-karanjiya-portfolio.vercel.app/",
+        vercelDisplay: false,
+      },
+    },
+    {
+      title: "Todo List",
+      time: "January 2025",
+      image: "todo-angular.png",
+      description:
+        "Developed a basic Angular Todo-app. I create the app while learing Angular framework",
+      tech: ["Angular", "SCSS"],
+      url: {
+        github: "https://github.com/harshkaranjiya10/Todo-App-Angular",
+        githubDisplay: true,
+        vercel: "https://todo-app-angular-plum.vercel.app/",
         vercelDisplay: false,
       },
     },
@@ -131,5 +148,5 @@ export const DATA = {
       name: "Pintrest",
       href: "https://www.pinterest.com/harshkaranjiya/",
     },
-  ]
+  ],
 };

@@ -123,7 +123,7 @@ export const DATA = {
         github: "https://github.com/harshkaranjiya10/Todo-App-Angular",
         githubDisplay: true,
         vercel: "https://todo-app-angular-plum.vercel.app/",
-        vercelDisplay: false,
+        vercelDisplay: true,
       },
     },
   ],

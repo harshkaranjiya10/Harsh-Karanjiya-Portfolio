@@ -20,7 +20,7 @@ export default function WorkExperience() {
                 <div className="flex flex-col sm:flex-row sm:justify-between items-center sm:items-start">
                   <div className="flex items-center space-x-4">
                     <img
-                      src="csfi.png"
+                      src={experience.logoUrl}
                       alt={experience.company}
                       width="50"
                       height="20"

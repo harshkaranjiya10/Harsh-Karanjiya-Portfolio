@@ -18,6 +18,7 @@ export const DATA = {
     "Node.js",
     "MongoDB",
     "Express.js",
+    "Next.js",
     "GitHub",
     "Typescript",
     "RESTful API",
@@ -34,11 +35,23 @@ export const DATA = {
       badges: [],
       location: "Arvali",
       title: "Shiksha Mitra (Rural Intern)",
-      logoUrl: "/memoji.jpeg",
+      logoUrl: "/csfi.png",
       start: "December 2022",
       end: "January 2023",
       description:
         "Conducted training sessions on technical skills photo and video editing, MS Office. Actively promoted the work and initiatives of the NGO onvarious social media platforms, increasing their online presence and outreach. Taught basic Math and Science children of rural community.",
+    },
+    {
+      company: "Equality Healthcare Pvt. Ltd. (eVital)",
+      href: "",
+      badges: [],
+      location: "Ahmedabad",
+      title: "Frontend Engineer (Intern)",
+      logoUrl: "/evital.png",
+      start: "January 2025",
+      end: "Present",
+      description:
+        "Working on frontend development using Angular and TypeScript Implementing responsive UI with HTML, CSS, and Angular Material. Collaborating with backend teams via REST APIs and integrating data using RxJS and HttpClient. Gaining hands-on experience with routing, services, state management, and form validations in Angular.",
     },
   ],
   education: [
